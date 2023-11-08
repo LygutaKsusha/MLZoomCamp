@@ -3,9 +3,9 @@
 Machine Learning Zoomcamp - course 2023.
 
 ## Project description
-This project contains Kaggle images set classification for kitchen.
+This small project contains Kaggle images set of classification for the kitchen.
 
-It classifies images of kitchenware into 4 classes:
+It classifies images into 4 classes:
 
 * glasses
 * plates
@@ -22,15 +22,15 @@ The dataset is split into a training set and a test set.
 * `kitchen-images/notebooks.ipynb` - Jupyter notebook with the EDA and with the model training code and the submission code.
 * `kitchen-images/kaggel-submission.csv` - submission file
 * `Pipfile` - pipenv file
-* `Dockerfile` - docker file for the API and streamlit app
-* `main.py` - API file which will run the model and return the prediction for web image.
-* `streamlit.py` - streamlit app which will run the model and return the prediction for local image.
+* `Dockerfile` - Docker file for the API and application
+* `main.py` - API file that runs the model and returns prediction for the web image.
+* `streamlit.py` - Application that runs the model and returns the prediction for the local image.
 * `README.md` - Readme file
 
 # Traine the model:
 
 ## Build model with the script:
-Download the [data](https://www.kaggle.com/competitions/kitchen-images/data?select=images) and put images folder under kitchen-images folder.
+Download the [data](https://www.kaggle.com/competitions/kitchen-images/data?select=images) and put images under the kitchen-images folder.
 * `pipenv run python train.py` - train the model and save it in the models folder.
 
 # Tests with Docker:
@@ -50,11 +50,11 @@ curl -X 'POST' \
 ```
 
 Streamlit application:
-Access the streamlit app on <http://localhost:8501/> in your browser.
+Access the application on <http://localhost:8501/> in your browser.
 
-# Run API and streamlit application locally:
+# Run API and the application locally:
 
-## Run & Test the API with web image:
+## Run & Test the API with the web image:
 `pipenv run python -m uvicorn main:app`
 ```
 curl -X 'POST' \
@@ -66,12 +66,9 @@ curl -X 'POST' \
 }'
 ```
 
-## Run & Test with streamlit application:
+## Run & Test with the application:
 `pipenv run streamlit run app.py` - will be running application locally on port 8501.
 Access the app on `http://localhost:8501/` in your browser.
-
-
-
 
 
 
